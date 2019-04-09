@@ -1,0 +1,124 @@
+<div class="third_content" ng-controller="QuestionController">
+  <h3 class="content_text">Wieviele Mitarbeiter hat Ihr Unternehmen?</h3>
+  <div class="row">
+    <div class="col-md-6 members">
+      <p>
+        <input type="checkbox" id="d1" name="mita">
+        <label for="d1" data-labelfor="d1">
+          1 Mitarbeiter
+        </label>
+      </p>
+      <p>
+        <input type="checkbox" id="d2" name="mita">
+        <label for="d2" data-labelfor="d2">
+          2-5 Mitarbeiter
+        </label>
+      </p>
+      <p>
+        <input type="checkbox" id="d3" name="mita">
+        <label for="d3" data-labelfor="d3">
+          6-10 Mitarbeiter
+        </label>
+      </p>
+      <p>
+        <input type="checkbox" id="d4" name="mita">
+        <label for="d4" data-labelfor="d4">
+          11-20 Mitarbeiter
+        </label>
+      </p>
+      <p>
+        <input type="checkbox" id="d5" name="mita">
+        <label for="d5" data-labelfor="d5">
+          21-50 Mitarbeiter
+        </label>
+      </p>
+      <p>
+        <input type="checkbox" id="d6" name="mita">
+        <label for="d6" data-labelfor="d6">
+          51-100 Mitarbeiter
+        </label>
+      </p>
+      <p>
+        <input type="checkbox" id="d7" name="mita">
+        <label for="d7" data-labelfor="d7">
+          101-500 Mitarbeiter
+        </label>
+      </p>
+      <p>
+        <input type="checkbox" id="d8" name="mita">
+        <label for="d8" data-labelfor="d8">
+          501-1000 Mitarbeiter
+        </label>
+      </p>
+      <p>
+        <input type="checkbox" id="d9" name="mita">
+        <label for="d9" data-labelfor="d9">
+          Mehr als 1000 Mitarbeiter
+        </label>
+      </p>
+      <p>
+      <p>
+        <a href="#!form" ng-click="animate(60,100)" id='next' style="pointer-events: none;" class="btn_weiter2 next">Weiter</a>
+      </p>
+    </div>
+    <div class="col-md-6">
+      <img src="img/map.png" alt="map" class="map_img">
+    </div>
+  </div>
+</div>
+<script>
+    $(document).ready(function () {
+        var id;
+        $(window).resize(function () {
+            clearTimeout(id);
+            id = setTimeout(doneResizing, 100);
+        });
+
+        function doneResizing() {
+            if ($(window).width() >1023) {
+                var image_height = $('img.logo').height();
+                $('img.dask').css({'height': image_height}*0.3);
+                var table_h = $('#mid').height();
+                $('.mid2').css({'height': table_h});
+            }else {
+                $('img.dask').css({'height': image_height * 1.2});
+            }
+        }
+    });
+    // checkbox
+    $(document).ready(function () {
+        var image_height = $('img.logo').height();
+        $('img.dask').css({'height': image_height * 1.2});
+    });
+
+    $('.radio_sex label').click(function () {
+        if ($(this).hasClass('current')) {
+            $(this).removeClass('current');
+        } else {
+            $('.radio_sex label').removeClass('current');
+            $(this).addClass('current');
+        }
+    });
+    // members
+
+    $('.members label').click(function () {
+        if ($(this).hasClass('checked')) {
+            $(this).removeClass('checked');
+        } else {
+            $('.members label').removeClass('checked');
+            $(this).addClass('checked');
+        }
+    });
+    $('.check label').click(function () {
+        $(this).find('.checkbox').toggleClass('ckh');
+    });
+
+    $(document).ready(function () {
+        if ($(window).width() < 768) {
+            $('html, body').animate({
+                scrollTop: $("div.content_box").offset().top
+            })
+        }
+
+    });
+</script>

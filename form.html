@@ -1,0 +1,105 @@
+<div class="fourth_content">
+    <h3 class="content_text">Es wurden <span style="color: #a2c614">4</span> passende Hersteller in der Datenbank gefunden. Die Empfehlungen werden individuell für Sie erstellt. Ihre Angaben werden hierfür benötigt.</h3>
+    <div class="row">
+        <div class="col-md-6">
+            <div>
+                <div class="radio_sex">
+                    <input type="radio" id="sex_1" name="anrede" value="Herr">
+                    <label for="sex_1">Herr</label>
+                    <input type="radio" id="sex_2" name="anrede" value="Frau">
+                    <label for="sex_2">Frau</label>
+                </div>
+
+                <div class="two-inputs">
+                    <input data-min-length="3" type="text" name="vorname" placeholder="Name">
+                    <input data-min-length="3" type="text" placeholder="Unternehmen" name="unternehmen">
+                </div>
+                <input data-type="phone" type="text" placeholder="Telefon" name="Telefon">
+                <input data-type="email" type="text" placeholder="E-Mail-Adresse" name="E-Mail-Adresse">
+                <div class="required_box">
+                    <input type="checkbox" id="required" name="required" value="1">
+                    <label for="required">Hiermit stimme ich der <a href="/datenschutz" target="_blank">Datenschutzerklärung</a> und -verarbeitung zu.</label>
+                </div>
+                <a class="btn_weiter" href="#">Hersteller vergleichen
+                    <span>kostenlos &amp; unverbindlich</span></a>
+                <h5> HR-Software-Vergleich ist bekannt aus: </h5>
+                <img class="logos" src="img/logosmark.png">
+            </div>
+        </div>
+        <div class="col-md-6">
+            <ul class="checks">
+                <li>Über 100 HR-Software-Hersteller im Vergleich</li>
+                <li>Bis zu 30% vom Listenpreis sparen</li>
+                <li>Hohe Zeitersparnis durch Expertencheck</li>
+            </ul>
+            <div class="our_text">
+                <img src="img/Kathleen.jpg" alt="">
+                <p class="text">
+                    "Das Team von HR-Software-Vergleich.de hat mir bei der Vorauswahl der passenden Bewerbermanagement-Software sehr geholfen. Die kostenlose Empfehlung war für mich eine enorme Zeitersparnis. Ich bedanke mich für den freundlichen und kompetenten Service, den ich allen HR-Software-Suchenden weiterempfehlen kann."
+                </p>
+                <p class="author">
+                    Kathleen Topp, Teamleitung Human Resource Implico
+                </p>
+                <img src="https://www.klick-tipp.com/pix/29jzfw1zfz434c" height="1" width="1">
+            </div>
+
+        </div>
+    </div>
+</div>
+<script>
+    $(document).ready(function () {
+        var id;
+        $(window).resize(function () {
+            clearTimeout(id);
+            id = setTimeout(doneResizing, 100);
+        });
+
+        function doneResizing() {
+            if ($(window).width() >1023) {
+                var image_height = $('img.logo').height();
+                $('img.dask').css({'height': image_height}*0.3);
+                var table_h = $('#mid').height();
+                $('.mid2').css({'height': table_h});
+            }else {
+                $('img.dask').css({'height': image_height * 1.2});
+            }
+        }
+    });
+    // checkbox
+    $(document).ready(function () {
+        var image_height = $('img.logo').height();
+        $('img.dask').css({'height': image_height * 1.2});
+    });
+
+    $('.radio_sex label').click(function () {
+        if ($(this).hasClass('current')) {
+            $(this).removeClass('current');
+        } else {
+            $('.radio_sex label').removeClass('current');
+            $(this).addClass('current');
+        }
+    });
+    // members
+
+    $('.members label').click(function () {
+        if ($(this).hasClass('checked')) {
+            $(this).removeClass('checked');
+        } else {
+            $('.members label').removeClass('checked');
+            $(this).addClass('checked');
+        }
+    });
+    $('.check label').click(function () {
+        $(this).find('.checkbox').toggleClass('ckh');
+    });
+
+    $(document).ready(function () {
+        if ($(window).width() < 768) {
+            $('html, body').animate({
+                scrollTop: $("div.content_box").offset().top
+            })
+        }
+
+    });
+
+</script>

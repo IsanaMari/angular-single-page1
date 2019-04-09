@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>German</title>
+    <!-- fontawesome -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.1/css/all.css"
+          integrity="sha384-gfdkjb5BdAXd+lj+gudLWI+BXq4IuLW5IT+brZEZsLFm++aCMlF1V92rMkPaX4PP"
+          crossorigin="anonymous">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.1/css/all.css"
+          integrity="sha384-gfdkjb5BdAXd+lj+gudLWI+BXq4IuLW5IT+brZEZsLFm++aCMlF1V92rMkPaX4PP" crossorigin="anonymous">
+    <!-- bootstrap -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
+          integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO"
+          crossorigin="anonymous">
+    <!-- styles -->
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body ng-app='treck'>
+<div class="container">
+    <div class="row box">
+        <div class="col-md-9 col-12 header_images">
+            <div id="height_menu">
+                <a href="#" class="main_logo"><img src="img/logo.png" alt="logo" class="logo"></a>
+                <p class="hide_tel">
+                    <a href="">030 - 577 00 262 <span>(Montag-Freitag, 08.00-18.00)</span></a>
+                </p>
+            </div>
+            <img src="img/ekomi.png" alt="ekomi" class="dask">
+            <img src="img/ssl.png" alt="ssl" class="dask">
+            <img src="img/made_in_germany.png" alt="made" class="dask">
+            <p class="tel">
+                <a href="">030 - 577 00 262 <span>(Montag-Freitag, 08.00-18.00)</span></a>
+            </p>
+        </div>
+        <div class="col-md-3"></div>
+        <div class="col-md-9"></div>
+        <div class="col-md-3 text_notif">
+            <p>Die Experten für HR-Software</p>
+        </div>
+        <div class="col-md-12 header_box">
+            <div class="row">
+                <img src="img/bis-zu.png" alt="kostenlos" class="kostenlos">
+                <div class="col-md-1"></div>
+                <div class="col-md-8 col-11 header_text">
+                    <h2>Der kostenlose HR-Software-Vergleich</h2>
+                    <p>Jetzt Marktüberblick gewinnen und Fehlinvestitionen von bis zu 25.800€ vermeiden.</p>
+                    <hr>
+                    <ul>
+                        <li>
+                            <p><span class="fa fa-check"></span>100 geprüfte Hersteller</p>
+                        </li>
+                        <li>
+                            <p><span class="fa fa-check"></span>Unabhängig</p>
+                        </li>
+                        <li>
+                            <p><span class="fa fa-check"></span>Bis zu 78% Zeitersparnis</p>
+                        </li>
+                    </ul>
+                </div>
+                <img src="img/arrow.png" alt="arrow" class="arrow">
+            </div>
+        </div>
+        <div class="col-md-12 content_box ">
+            <div class="row">
+                <div class="col-md-1"></div>
+                <div class="col-md-10" ng-view>
+
+
+                </div>
+                <div class="col-md-1"></div>
+                <div class="col-md-1"></div>
+                <div class="col-md-10 col-12">
+                    <div class="col-md-12" style="padding: 0;">
+                        <p class="percent_number"><span id='pers'>0%</span></p>
+                        <div id="progressbar">
+                            <div class="progress-bar" id='progres' role="progressbar" style="width: 0%"
+                                 aria-valuenow="0" aria-valuemin="0" aria-valuemax="100"></div>
+                        </div>
+                    </div>
+                    <div class="col-md-12 col-12 footer_table" style="padding: 0">
+                        <div class="row">
+                            <div class="col-md-4 col-12">
+                                <div class="footer_text">
+                                    <h4>Ein Auszug unserer Partner</h4>
+                                </div>
+                                <hr>
+                                <img src="img/SP_Data_Logo1.png" alt="logo">
+                                <img src="img/Bite_Logo_2.png" alt="logo">
+                                <img src="img/Rexx_systems_Logo_3.png" alt="logo">
+                                <img src="img/Lumesse_Logo_4.png" alt="logo">
+                                <img src="img/SuccessFactors_Logo_5.png" alt="v">
+                                <img src="img/Haufe_Logo_6.png" alt="logo">
+                            </div>
+                            <div class="col-md-4 col-12">
+                                <div class="footer_text">
+                                    <h4>Kundenbewertung</h4>
+                                    <p class="num">SEHR GUT 4.8 / 5.0
+                                    </p>
+                                </div>
+                                <hr>
+                                <div class="reference">
+                                    <div class="score">4.9</div>
+                                    <div class="details">
+                                        <p class="about">"Ihr Angebot war nützlich für uns."</p>
+                                        <p class="name">Maria R.</p>
+                                        <div class="stars">
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="reference">
+                                    <div class="score">4.7</div>
+                                    <div class="details">
+                                        <p class="about">"Über 1h Telefonberatung - toll!"</p>
+                                        <p class="name">Sylvia E.</p>
+                                        <div class="stars">
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star-half-alt"></i>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="reference">
+                                    <div class="score">4.8</div>
+                                    <div class="details">
+                                        <p class="about">"Endlich hat die Suche ein Ende!"</p>
+                                        <p class="name">Markus W.</p>
+                                        <div class="stars">
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star-half-alt"></i>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-4 col-12">
+                                <div class="footer_text">
+                                    <h4>Ein Auszug unserer Partner</h4>
+                                </div>
+                                <hr>
+                                <div class="minutes">
+                                    <p>Letzte Anfrage vor</p>
+                                    <div class="score2">16 min</div>
+
+                                </div>
+                                <div class="minutes">
+                                    <p>Anfragen von heute</p>
+                                    <div class="score2">14</div>
+
+                                </div>
+                                <div class="minutes">
+                                    <p>Gesamtanfragen</p>
+                                    <div class="score2">1.831</div>
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>
+</body>
+<!-- jquery -->
+<script
+        src="https://code.jquery.com/jquery-3.3.1.js"
+        integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60="
+        crossorigin="anonymous"></script>
+<!-- bootstrap -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"
+        integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
+        crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"
+        integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
+        crossorigin="anonymous"></script>
+<!-- scripts -->
+<script src="angular.min.js"></script>
+<script src="angular-route.min.js"></script>
+<script src="main.js"></script>
+<script src="code.js"></script>
+<script>
+    $(document).ready(function () {
+        $('img.dask').css({'height': image_height * 1.5});
+        var id;
+        $(window).resize(function () {
+            clearTimeout(id);
+            id = setTimeout(doneResizing, 300);
+        });
+
+        function doneResizing() {
+            if ($(window).width() >1023) {
+                var image_height = $('img.logo').height();
+                $('img.dask').css({'height': image_height}*0.5);
+                var table_h = $('#mid').height();
+                $('.mid2').css({'height': table_h});
+            }else {
+                $('img.dask').css({'height': image_height * 1.5});
+            }
+        }
+    });
+    // checkbox
+    $(document).ready(function () {
+        var image_height = $('img.logo').height();
+        $('img.dask').css({'height': image_height * 1.2});
+    });
+
+    $('.radio_sex label').click(function () {
+        if ($(this).hasClass('current')) {
+            $(this).removeClass('current');
+        } else {
+            $('.radio_sex label').removeClass('current');
+            $(this).addClass('current');
+        }
+    });
+    // members
+
+    $('.members label').click(function () {
+        if ($(this).hasClass('checked')) {
+            $(this).removeClass('checked');
+        } else {
+            $('.members label').removeClass('checked');
+            $(this).addClass('checked');
+        }
+    });
+    $('.check label').click(function () {
+        $(this).find('.checkbox').toggleClass('ckh');
+    });
+
+    $(document).ready(function () {
+        if ($(window).width() < 768) {
+            $('html, body').animate({
+                scrollTop: $("div.content_box").offset().top
+            })
+        }
+
+    });
+</script>
+</html>
